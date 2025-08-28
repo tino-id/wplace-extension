@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "WPlace Request Interceptor",
+  "version": "1.0.0",
+  "description": "Intercepts and modifies POST requests to wplace.live backend",
+  "permissions": [],
+  "host_permissions": [
+    "https://backend.wplace.live/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
