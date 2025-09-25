@@ -1,4 +1,4 @@
-console.log("Content script loaded");
+console.log("🌍", "Content script loaded");
 
 // Inject script into the main world of the page
 const script = document.createElement('script');
